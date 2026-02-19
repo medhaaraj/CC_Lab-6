@@ -1,6 +1,7 @@
-FROM --platform=linux/amd64 ubuntu:22.04
+FROM ubuntu:22.04
 
-RUN apt-get update && apt-get install -y g++
+
+RUN apt-get update && apt-get install -y g++ && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
